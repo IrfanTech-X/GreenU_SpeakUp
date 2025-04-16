@@ -9,6 +9,8 @@
   body {
     background: linear-gradient(135deg, rgba(224, 251, 226, 0.8), #4acbc0, #77d8d0);
 
+    /*changed the ci=olor scheme */
+
     color: #1e3932;
     line-height: 1.6;
   }
