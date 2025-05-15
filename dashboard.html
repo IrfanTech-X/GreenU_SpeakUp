@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - GreenU SpeakUp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-layout">
+
+  <header class="main-header">
+    <h1>GreenU SpeakUp</h1>
+    <button onclick="location.href='logout.php'" class="logout-btn">Log Out</button>
+  </header>
+
+  <div class="container">
+    
+    <!-- Left Sidebar -->
+    <aside class="sidebar left-sidebar">
+      <div class="profile-box">
+        <img src="profile-placeholder.png" alt="Profile" class="profile-pic">
+        <h3>Welcome, Student!</h3>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#">🏠 Dashboard</a></li>
+          <li><a href="#">📝 My Posts</a></li>
+          <li><a href="#">📢 Top Complaints</a></li>
+          <li><a href="#">✅ Solved Issues</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Feed Section -->
+    <main class="main-feed">
+      <div class="new-post">
+        <textarea placeholder="Share your thoughts or complaints..." rows="4"></textarea>
+        <button class="post-button">Post</button>
+      </div>
+
+      <div class="feed">
+        <h2>📃 Newsfeed</h2>
+
+        <div class="feed-scroll">
+          <div class="post-box">
+            <p><strong>Anonymous:</strong> The library is always full, even in the morning.</p>
+            <div class="comments">
+              <p><strong>Comment:</strong> </p>
+              <textarea placeholder="Add a comment..."></textarea>
+              <button class="comment-button">Comment</button>
+            </div>
+          </div>
+
+          <div class="post-box">
+            <p><strong>Anonymous:</strong> We need more power outlets in the study areas.</p>
+            <div class="comments">
+              <p><strong>Comment:</strong></p>
+              <textarea placeholder="Add a comment..."></textarea>
+              <button class="comment-button">Comment</button>
+            </div>
+          </div>
+
+          <div class="post-box">
+            <p><strong>Anonymous:</strong> Please fix the projector in Room 305!</p>
+            <div class="comments">
+              <p><strong>Comment:</strong></p>
+              <textarea placeholder="Add a comment..."></textarea>
+              <button class="comment-button">Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar right-sidebar">
+      <section class="top-complaints">
+        <h3>🔥 Top Complaints</h3>
+        <ul>
+          <li>WiFi not working in Block B</li>
+          <li>Broken chairs in Room 204</li>
+          <li>AC not functioning in Lab 3</li>
+        </ul>
+      </section>
+
+      <section class="quick-options">
+        <h3>⚙️ Quick Options</h3>
+        <button onclick="alert('Feature coming soon!')">Filter by Category</button>
+        <button onclick="alert('Feature coming soon!')">Report a New Issue</button>
+        <button onclick="alert('Feature coming soon!')">View Solved Complaints</button>
+      </section>
+    </aside>
+
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 GreenU SpeakUp. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
