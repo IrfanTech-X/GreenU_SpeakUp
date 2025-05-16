@@ -58,10 +58,11 @@ header h1 {
     background: #22c55e;
     color: white;
     border: none;
-    padding: 12px 28px;
-    border-radius: 30px;
+    padding: 12px 25px;
+    border-radius: 50px;
     /* font-weight: 700; */
     cursor: pointer;
+    font-weight: bold;
     /* box-shadow: 0 8px 20px rgba(34, 197, 94, 0.5); */
      box-shadow: 0 0px 5px rgba(34, 197, 94, 0.5);
      
