@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+     
+    /* background: rgba(20, 35, 20, 0.85);  
+    backdrop-filter: blur(10px);
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+     border-bottom: 2px solid #4ade80; 
+     box-shadow: 0 8px 16px rgba(34, 197, 94, 0.3);  */
+
+
+
+
+     background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #22c55e;
+    box-shadow: 0 6px 12px rgba(34, 197, 94, 0.3);
+    transition: background 0.3s ease;
+
+
+
+    z-index: 1000;
+}
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #22c55e; /* lime green */
+}
+.auth button {
+    background: #22c55e; /* lime green */
+    color: #e0f2f1; /* soft light */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0px 5px rgba(34, 197, 94, 0.5); /* vibrant green glow */
+}
+
+.auth button:hover {
+    background: #16a34a; /* darker green */
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1px 20px;
+    /* background: rgba(20, 35, 20, 0.85);
+    backdrop-filter: blur(10px);
+    
+    border-top: 2px solid #4ade80;
+    box-shadow: 0 -8px 16px rgba(22, 163, 74, 0.3); */
+
+
+     background: #111827;
+    border-top: 2px solid #16a34a;
+    /* padding: 30px 20px; */
+    text-align: center;
+
+
+
+    text-align: center;
+    color: #a7f3d0; /* soft light green */
+    z-index: 1000;
+}
+
+/* To prevent content hiding behind fixed header and footer */
+body {
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* background: linear-gradient(135deg, #0f2614, #1a3a21, #23452a);        dark green gradient */
+  background: linear-gradient(135deg, #121212, #1f2937);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d1fae5; /* light green text */
+}
+
+/* Typography */
+h1 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #f8faf9; /* lighter green */
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  margin: 20px 0 30px;
+  color: #a7f3d0; /* soft green text */
+}
+
+/* Buttons */
+button {
+  border-radius: 50px;
+  border: none;
+  background-color: #22c55e; /* lime green */
+  color: #e0f2f1;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.5); /* green glow */
+}
+
+button:hover {
+  background-color: #16a34a; /* darker green */
+  color: #e0f2f1;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border: 2px solid #4ade80; /* light green border */
+  color: #a7f3d0; /* soft green */
+}
+
+/* Forms */
+form {
+  background-color: #111827;
+  padding: 0 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4); /* subtle green shadow */
+}
+
+input {
+  background-color: #1f2937dd; /* dark input bg */
+  border: 1px solid #4ade80; /* lighter green border */
+  padding: 12px 15px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 10px;
+  color: #fbfbfb;
+  transition: border-color 0.3s;
+}
+
+input::placeholder {
+  color: #f6f6f6;
+}
+
+input:focus {
+  border-color: #22c55e;
+  outline: none;
+}
+
+/* Container Layout */
+.container {
+  background-color: #1f2937dd; /* dark container */
+  border-radius: 15px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.8),
+              0 10px 10px rgba(22, 163, 74, 0.4);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Overlay Section */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background: linear-gradient(90deg, #679978 0%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #e0f2f1;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  box-shadow: 0 0 60px #22c55e88; /* glowing green */
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  color: #d1fae5;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+  left: 0;
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}

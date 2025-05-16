@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #a2f5c2;
+    box-shadow: 0 8px 16px rgba(0, 100, 50, 0.1);
+    z-index: 1000; /* make sure it stays above other content */
+}
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00c76b;
+}
+.auth button {
+    background: #00c76b;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 199, 107, 0.4);
+}
+
+.auth button:hover {
+    background: #02a556;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 15px 50px;
+    border-top: 2px solid #a2f5c2;
+    box-shadow: 0 -8px 16px rgba(0, 100, 50, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* To prevent content hiding behind fixed header and footer */
+body {
+    padding-top: 90px;   /* Adjust based on your header height */
+    padding-bottom: 60px; /* Adjust based on your footer height */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, rgba(224, 251, 226, 0.8), #4acbc0, #77d8d0); /* light greenish background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0a0f0a;
+}
+
+/* Typography */
+h1 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  margin: 20px 0 30px;
+  color: #4e4e4e;
+}
+
+/* Buttons */
+button {
+  border-radius: 50px;
+  border: none;
+  background-color:#00c76b; 
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(67, 160, 71, 0.3);
+}
+
+button:hover {
+  background-color: #0a0e0a;
+  
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent #43a047;
+  border: 2px solid #878a87;
+  color: #f0f0f0;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 0 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+input {
+  background-color: #f1f8e9;
+  border: 1px solid #c8e6c9;
+  padding: 12px 15px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #66bb6a;
+  outline: none;
+}
+
+/* Container Layout */
+.container {
+  background-color: #ffffff;
+  border-radius: 15px;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+              0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Overlay Section */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background:  #00c76b; /* nice green gradient */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+  left: 0;
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}

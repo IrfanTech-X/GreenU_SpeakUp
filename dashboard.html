@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard - GreenU SpeakUp</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard_style.css">
+  <link rel="stylesheet" href="light.css">
 </head>
 <body class="dashboard-layout">
 
   <header class="main-header">
     <h1>GreenU SpeakUp</h1>
+    <button onclick="toggleTheme()" id="toggle-btn" aria-label="Toggle theme">🌙</button>
+
     <button onclick="location.href='logout.php'" class="logout-btn">Log Out</button>
+    
   </header>
 
   <div class="container">
@@ -27,6 +31,7 @@
           <li><a href="#">📝 My Posts</a></li>
           <li><a href="#">📢 Top Complaints</a></li>
           <li><a href="#">✅ Solved Issues</a></li>
+          
         </ul>
       </nav>
     </aside>
@@ -97,5 +102,6 @@
     <p>&copy; 2025 GreenU SpeakUp. All rights reserved.</p>
   </footer>
 
+  <script src="theme.js"></script>
 </body>
 </html>

@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenU SpeakUp</title>
     <link rel="icon" href="GUB_Logo.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="style.css">
-   
+   <link id="theme-link" rel="stylesheet" href="light.css">
+    
+    
 </head>
 <body>
     <header>
         <h1>GreenU SpeakUp</h1>
         <div class="auth">
-            <button  onclick="location.href='login.html'">Log In</button>
-            <button  onclick="location.href='login.html'">Sign Up</button>
+            <button onclick="toggleTheme()" id="toggle-btn" aria-label="Toggle dark mode">🌙</button>
+            <button aria-label="Home" onclick="location.href='index.html'">🏠Home</button>
+
+            <button onclick="location.href='login.html?action=login'">Log In</button>
+            <button onclick="location.href='login.html?action=signup'">Sign Up</button>
         </div>
     </header>
 
     <section class="Moti">
         <h2>GreenU SpeakUp</h2>
-        <p>A voice for Students, a bridge to Teachers & Authorities , a step toward Solutions.</p>
+        <p>A voice for Students, a bridge to Teachers & Authorities, a step toward Solutions.</p>
     </section>
 
     <section class="intro">
@@ -28,41 +31,64 @@
         <p>GreenU SpeakUp is a platform built for students and teachers to express, share, and connect. We created this to provide a safe, secure, and interactive environment just like a social hub for our Green University family.</p>
     </section>
 
+    <!-- News Section -->
+    <section class="news-section">
+        <h2>Campus Updates</h2>
+        
+        <article class="news-item">
+            <div class="news-date">13 Feb 2025</div>
+            <h3>Pitha Festival 2025</h3>
+            <p>The colorful winter festival titled Pitha Festival 2025 was successfully organized on February 11...</p>
+            <a href="#" class="read-more">Read more →</a>
+        </article>
+
+        <article class="news-item">
+            <div class="news-date">07 Feb 2025</div>
+            <h3>GUB Signs MoU with Industry Partners</h3>
+            <blockquote>Green University signed an MoU with Industry-Academic partners to enhance collaboration...</blockquote>
+            <a href="#" class="read-more">Read more →</a>
+        </article>
+    </section>
+
+    <!-- Features Carousel -->
     <section class="features">
         <h2> Key Features of <span>GreenU SpeakUp</span></h2>
-        <div class="feature-list">
-            <div class="feature-box">
-                <h3>Anonymous Concern Submission</h3>
-                <p>Students can express their issues without revealing their identity (roll or ID), ensuring privacy and encouraging honest feedback.</p>
+        <div class="feature-carousel">
+            <div class="feature-list">
+                <div class="feature-box">
+                    <h3>Anonymous Concern Submission</h3>
+                    <p>Students can express their issues without revealing their identity (roll or ID), ensuring privacy and encouraging honest feedback.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Direct Communication Channel</h3>
+                    <p>Acts as a bridge between students and university authorities, helping concerns reach the right place without hesitation or fear.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Teacher & Staff Inclusion</h3>
+                    <p>Not only students — teachers and admin staff can also raise their concerns, making it a unified platform for all members of Green University.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Interactive Social Platform</h3>
+                    <p>Works like a social media space where users can post, comment, and interact with others who share similar issues or thoughts.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Problem Solving & Resolution Tracking</h3>
+                    <p>Authorities can view, address, and take action on the raised concerns, creating a more responsive and solution-driven environment.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Community Engagement</h3>
+                    <p>Fosters connection between students, seniors, juniors, teachers, and staff — allowing everyone to come together for discussion and collective solutions.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>University Reputation Protection</h3>
+                    <p>Keeps sensitive issues within a private, trusted university platform, avoiding the risks of public exposure on external social media.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Supportive Campus Environment</h3>
+                    <p>Builds a safe, secure, and engaging environment where everyone feels heard and supported — improving overall student life and institutional unity.</p>
+                </div>
             </div>
-            <div class="feature-box">
-                <h3>Direct Communication Channel</h3>
-                <p>Acts as a bridge between students and university authorities, helping concerns reach the right place without hesitation or fear.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Teacher & Staff Inclusion</h3>
-                <p>Not only students — teachers and admin staff can also raise their concerns, making it a unified platform for all members of Green University.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Interactive Social Platform</h3>
-                <p>Works like a social media space where users can post, comment, and interact with others who share similar issues or thoughts.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Problem Solving & Resolution Tracking</h3>
-                <p>Authorities can view, address, and take action on the raised concerns, creating a more responsive and solution-driven environment.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Community Engagement</h3>
-                <p>Fosters connection between students, seniors, juniors, teachers, and staff — allowing everyone to come together for discussion and collective solutions.</p>
-            </div>
-            <div class="feature-box">
-                <h3>University Reputation Protection</h3>
-                <p>Keeps sensitive issues within a private, trusted university platform, avoiding the risks of public exposure on external social media.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Supportive Campus Environment</h3>
-                <p>Builds a safe, secure, and engaging environment where everyone feels heard and supported — improving overall student life and institutional unity.</p>
-            </div>
+            <div class="carousel-dots"></div>
         </div>
     </section>
 
@@ -72,21 +98,18 @@
             <div class="developer-box">
                 <img src="bg.jpg" alt="Developer 1">
                 <p>Irfan Ferdous</p>
-                <textarea rows="3" readonly>Inspired by the need for student engagement and expression, GreenU SpeakUp is our humble initiative.  </textarea>
-                
+                <textarea rows="3" readonly>Inspired by the need for student engagement and expression, GreenU SpeakUp is our humble initiative.</textarea>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/irfan-ferdous-siam/">LinkedIn</a>
-                    <!-- <a href="#">Facebook</a> -->
                     <a href="mailto:siamtalukdar3@gmail.com">Gmail</a>
                 </div>
             </div>
             <div class="developer-box">
                 <img src="bg.jpg" alt="Developer 2">
                 <p>Toufiq Zahan</p>
-                <textarea rows="3" readonly>This platform was created to connect every mind of Green University and ensure every voice is heard. </textarea>
+                <textarea rows="3" readonly>This platform was created to connect every mind of Green University and ensure every voice is heard.</textarea>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/toufiq-zahan-tushar-a133a133b/">LinkedIn</a>
-                    <!-- <a href="">Facebook</a> -->
                     <a href="mailto:toufiqtushar99@gmail.com">Gmail</a>
                 </div>
             </div>
@@ -95,7 +118,10 @@
 
     <footer>
         <p>&copy; 2025 GreenU SpeakUp. All rights reserved.</p>
-       
     </footer>
+
+ 
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
 </body>
 </html>

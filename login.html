@@ -4,11 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GreenU SpeakUp</title>
-    <link rel="icon" href="GUB_Logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="style_log_sign.css" />
-  
+  <link rel="icon" href="GUB_Logo.png" type="image/x-icon">
+  <link id="theme-link1" rel="stylesheet" href="light_log_sign.css" />
 </head>
-<body >
+<body>
+  <header>
+    <h1>GreenU SpeakUp</h1>
+    <nav class="auth">
+      <!-- You can add navigation links here if needed -->
+       <button onclick="toggleTheme()" id="toggle-btn" aria-label="Toggle theme">🌙</button>
+        <button aria-label="Home" onclick="location.href='index.html'">🏠Home</button>
+    </nav>
+  </header>
 
 
   <div class="container" id="container">
@@ -16,14 +23,13 @@
       <form action="#">
         <h1>Create Account</h1>
         <input type="text" placeholder="Name" />
-        <input type="number" placeholder="Student ID / Teacher ID">
-        <input type="text" placeholder="Department">
+        <input type="number" placeholder="Student ID / Teacher ID" />
+        <input type="text" placeholder="Department" />
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
         <button>Sign Up</button>
       </form>
     </div>
-
 
     <div class="form-container sign-in-container">
       <form action="#">
@@ -37,11 +43,10 @@
     <div class="overlay-container">
       <div class="overlay">
         <div class="overlay-panel overlay-left">
-          <h1>Already Singed Up!</h1>
+          <h1>Already Signed Up!</h1>
           <p>To keep connected, please login with your info</p>
           <button class="ghost" id="signIn">Sign In</button>
         </div>
-
 
         <div class="overlay-panel overlay-right">
           <h1>Don't have an Account!</h1>
@@ -51,6 +56,12 @@
       </div>
     </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 GreenU SpeakUp. All rights reserved.</p>
+  </footer>
+
   <script src="log_sign.js"></script>
+  <script src="theme.js"></script>
 </body>
 </html>
